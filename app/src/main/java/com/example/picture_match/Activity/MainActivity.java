@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
         normal=findViewById(R.id.normal);
         hard=findViewById(R.id.hard);
 
-
-
         no_time_limit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

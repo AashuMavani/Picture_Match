@@ -27,7 +27,6 @@ public class Level_display_Adapter extends BaseAdapter {
     public Level_display_Adapter(Level_Display_Activity level_display_activity, List arrayList) {
         this.level_display_activity=level_display_activity;
         this.arrayList=arrayList;
-
     }
 
     @Override
@@ -50,8 +49,6 @@ public class Level_display_Adapter extends BaseAdapter {
         view= LayoutInflater.from(level_display_activity).inflate(R.layout.level_gridview_item,parent,false);
         ImageView imageView=view.findViewById(R.id.img_disp);
 
-
-
         Log.d("MMM", "getView: List="+arrayList);
         InputStream inputStream = null;
         try {
@@ -61,12 +58,9 @@ public class Level_display_Adapter extends BaseAdapter {
             inputStream.close();
             Log.d("MMM", "getView: Position="+position);
 
-
         } catch (IOException e) {
             new RuntimeException(e);
         }
-//        imageView.setImageDrawable((Drawable) imgarr.get(position));
-
         return view;
     }
 }
