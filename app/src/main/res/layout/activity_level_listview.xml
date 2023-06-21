@@ -6,34 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Level_Listview_Activity"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#009688"
         android:layout_weight="6"
-        android:padding="10dp">
+        android:background="#009688">
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:src="@drawable/baseline_arrow_back_24" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:padding="10dp"
+            android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:text="Select Level"
             android:textColor="#CBEBE8"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="normal" />
+
         <TextView
+            android:id="@+id/leveltype"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1.2"
+            android:text="NO TIME LIMIT"
             android:textColor="@color/white"
-            android:text="NORMAL"
-            android:layout_marginTop="25dp"/>
+            android:textSize="13dp"
+            android:textStyle="italic" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:src="@drawable/baseline_more_vert_24"/>
+            android:layout_weight="1.4"
+            android:src="@drawable/baseline_more_vert_24" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

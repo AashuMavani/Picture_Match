@@ -24,8 +24,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,Level_Listview_Activity.class);
+                intent.putExtra("level","NO_TIME_LIMIT");
                 startActivity(intent);
-                finish();
+
+            }
+        });
+        normal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Level_Listview_Activity.class);
+                intent.putExtra("level","NORMAL");
+                startActivity(intent);
+            }
+        });
+        hard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Level_Listview_Activity.class);
+                intent.putExtra("level","HARD");
+                startActivity(intent);
             }
         });
     }

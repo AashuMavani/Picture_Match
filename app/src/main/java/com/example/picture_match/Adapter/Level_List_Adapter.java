@@ -1,13 +1,11 @@
 package com.example.picture_match.Adapter;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,10 +16,12 @@ import com.example.picture_match.R;
 
 public class Level_List_Adapter extends RecyclerView.Adapter<Level_List_Adapter.LevellistHolder> {
     Level_Listview_Activity level_listview_activity;
-    int id;
+    String level;
 
-    public Level_List_Adapter(Level_Listview_Activity level_listview_activity) {
+
+    public Level_List_Adapter(Level_Listview_Activity level_listview_activity, String level) {
         this.level_listview_activity = level_listview_activity;
+        this.level=level;
     }
 
     @NonNull
@@ -49,16 +49,27 @@ public class Level_List_Adapter extends RecyclerView.Adapter<Level_List_Adapter.
            listView=itemView.findViewById(R.id.listview);
            Listview_Adapter adapter=new Listview_Adapter(level_listview_activity);
            listView.setAdapter(adapter);
+
            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
                @Override
                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
                    Intent intent=new Intent(level_listview_activity,Level_Display_Activity.class);
                    intent.putExtra("levelno",position+1);
+                   intent.putExtra("level",level);
                    level_listview_activity.startActivity(intent);
+
                }
+
            });
 
+
+
         }
+
+
 
 
     }

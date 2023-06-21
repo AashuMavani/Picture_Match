@@ -18,14 +18,25 @@
             android:layout_height="match_parent"
             android:src="@drawable/baseline_arrow_back_24"
             android:layout_weight="3"/>
+
         <TextView
             android:id="@+id/timeshow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Time:1/0 NO TIME LIMIT"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Time:1/0"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/leveltype1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="NOTIMELIMIT"
+            android:textColor="@color/white"
+            android:textSize="15dp"
             android:gravity="center"/>
 
         <ImageView
@@ -42,8 +53,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="6"></LinearLayout>
+        android:layout_weight="6"
+        android:gravity="center">
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
 
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
